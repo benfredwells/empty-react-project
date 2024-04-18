@@ -1,14 +1,17 @@
+import { useState } from "react";
+import { Button } from "./components/ui/button";
+
 function App() {
+  const [count, setCount] = useState(0);
+
   return (
-    <div className="flex flex-col">
-      <div>
-        Hello world!
+    <div className="h-screen flex items-center">
+      <div className="flex flex-col w-screen items-center">
+        <div>Count: {count}</div>
+        <Button onClick={() => setCount(count + 1)}>Increment!</Button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
